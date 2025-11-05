@@ -1,33 +1,76 @@
 package com.example.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Entity
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-
 public class Car {
 
-
     @Id
-     @GeneratedValue(strategy =  GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-@Column
+    @Column
     private String modelName;
 
-@Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private CarType type;
 
-@Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private CarColor color;
 
-private String description;
-}
+    private String description;
 
+    // 🔽 Costruttori
+    public Car() {}
+
+    public Car(Long id, String modelName, CarType type, CarColor color, String description) {
+        this.id = id;
+        this.modelName = modelName;
+        this.type = type;
+        this.color = color;
+        this.description = description;
+    }
+
+    // 🔽 Getter e Setter
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getModelName() {
+        return modelName;
+    }
+
+    public void setModelName(String modelName) {
+        this.modelName = modelName;
+    }
+
+    public CarType getType() {
+        return type;
+    }
+
+    public void setType(CarType type) {
+        this.type = type;
+    }
+
+    public CarColor getColor() {
+        return color;
+    }
+
+    public void setColor(CarColor color) {
+        this.color = color;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+}
