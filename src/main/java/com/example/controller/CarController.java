@@ -1,9 +1,8 @@
-package com.example.cars.controller;
+package com.example.controller;
 
-import com.example.cars.model.Car;
-import com.example.cars.model.CarType;
-import com.example.cars.repository.CarRepository;
-import org.apache.coyote.Response;
+import com.example.model.Car;
+import com.example.model.CarType;
+import com.example.repository.CarRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

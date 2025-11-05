@@ -1,13 +1,9 @@
-package com.example.cars.model;
+package com.example.model;
 
-import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Generated;
 import lombok.NoArgsConstructor;
-import model.CarColor;
-import model.CarType;
 
 @Entity
 @Data
@@ -32,6 +28,6 @@ public class Car {
     @Column(nullable = false)
     private CarColor color;
 
-private String descripiton;
+private String description;
 }
 
